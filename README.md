@@ -7,6 +7,7 @@ A real-life intense action game. Skånepolisen, created in 2014 by Melker, Arvid
 
 - Always reload after a POST request so that bad things with reloading forms won't happen.
 - Deploy.
+- Giving up gives error.
 
 ## Proposed Rule Changes
 
