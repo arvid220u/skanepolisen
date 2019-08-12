@@ -461,7 +461,7 @@ $frequencyOverride = NULL;
 									if (!$gottmosIsAlone) {
 										$cardInfo = "<br>De har ".$gang." ".$gangname.", ".$cykel." ".$cykelname." och ".$cykelrad." ".$cykelradname." tillsammans.<br>";
 									} else {
-										$cardInfo = "<br>Han har ".$gang." ".$gangname.", ".$cykel." ".$cykelname." och ".$cykelrad." ".$cykelradname.".<br>";
+										$cardInfo = "<br>Hen har ".$gang." ".$gangname.", ".$cykel." ".$cykelname." och ".$cykelrad." ".$cykelradname.".<br>";
 									}
 									
 									$gottmosPosWarning .= ucfirst($gottmosShowed)." är på position nr <b>".$pos."</b>.<br>";
