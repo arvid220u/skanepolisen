@@ -7,6 +7,7 @@ $username = $_SESSION['username'];
 
 if ($_SESSION['endDone'] != "set") {
 	include 'functions.php';
+	require($sendgrid_path);
 	$_SESSION['cssLink'] = $cssLink;
 	$username = $_SESSION['username'];
 	checkLogout();
