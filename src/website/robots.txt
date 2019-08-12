@@ -1,0 +1,25 @@
+User-Agent: *
+
+# Disallow all pages behind login wall
+Disallow: /chooseSide.php
+Disallow: /dynamicMode.php
+Disallow: /game.php
+Disallow: /gameEnded.php
+Disallow: /giveUp.php
+Disallow: /isOut.php
+Disallow: /lobby.php
+Disallow: /prepareGame.php
+Disallow: /signout.php
+Disallow: /waitToGame.php
+Disallow: /waitToPrepareGame.php
+
+# Disallow irrelevant pages, utility pages, assets
+Disallow: /functions.php
+Disallow: /htaccess-works.txt
+
+# Allowed pages (promoted)
+Allow: /index.php
+Allow: /rules.php
+Allow: /signin.php
+Allow: /signup.php
+Allow: /skanepolisenkarta.php

@@ -1,0 +1,408 @@
+.error {
+	color: rgba(231, 76, 60,1.0);
+	padding: 0;
+	margin: 0;
+}
+
+/* Body margin and general properties */
+
+body { 
+	width: 100%; 
+	height: 100%; 
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+}
+
+#scrolling {
+	font-family: "American Typewriter", Georgia;
+	font-weight: 400;
+	font-size: 12pt;
+	
+	display: block;
+	background-color: rgba(255, 0, 0, 0);
+	width: 100%;
+	min-height: 98%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+
+	padding-bottom: 12px;
+}
+
+
+#background-img {
+    background: url(/background.png);
+    background-size: 100%;
+	background-repeat:repeat-y;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
+
+.whiteBackground {
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	padding-top: 6px;
+	top: 12px;
+	left: 0;
+	right: 0;
+	margin-bottom: 12px;
+	background: white;
+}
+
+.indented {
+	padding: 0px 12px;
+	margin: 0px;
+}
+
+.center {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+}
+
+h1 {
+	margin-top: 0.4em;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: /*rgba(255, 30, 10, 0.9);*/rgba(22, 160, 133,1.0);
+}
+
+a:active {
+	color: rgba(231, 76, 60,1.0);
+}
+
+/* Styling of input types */
+
+input {
+	font-family: "American Typewriter", Georgia;
+	background-color: white;
+	text-align: left;
+	background: none;
+	border-radius: 2px;
+	border-style: solid;
+	border-color: black;
+	border-width: thin;
+}
+
+input:focus {
+	outline: none;
+}
+
+input:disabled {
+	opacity: 0.5;
+}
+
+.button {
+	padding: 0.4em;
+	margin: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	color: /*rgba(255, 30, 10, 0.9);*/rgba(20, 157, 130,1.0);
+	border-radius: 0px;
+	border: 0px;
+	font-size: 1.2em;
+	width: 100%;
+	text-align: center;
+}
+
+.bigbutton {
+	padding: 0em;
+	margin: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0em;
+	color: /*rgba(255, 30, 10, 0.9);*/rgba(20, 157, 130,1.0);
+	border-radius: 0px;
+	border: 0px;
+	font-size: 2em;
+	width: 100%;
+	text-align: center;
+}
+
+.boldbutton {
+	font-weight: 600; 
+}
+
+.button:active, .leftbutton:active, .rightbutton:active, .bigbutton:active {
+	color: rgba(231, 76, 60,1.0);
+}
+
+
+/* All styling for the radio tables */
+.radioTable {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.radioButton {
+	padding: 0;
+	margin: 0;
+	padding-top: 0.1em;
+	padding-bottom: 0;
+	border-radius: 0px;
+	border: 0px;
+	text-align: left;
+	width: 2em;
+}
+
+input[type=radio] {
+	background-color: rgba(255, 255, 255, 0);
+	-webkit-appearance: none;
+	border-radius:100%;
+	border: solid;
+	border-width: thin;
+	border-color: rgba(20, 157, 130,1.0);
+	width: 1.5em;
+	height: 1.5em;
+}
+
+input[type=radio]:checked {
+	background-color: rgba(20, 157, 130,1.0);
+}
+
+.radioLabel {
+	padding: 0;
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0.1em;
+	margin-left: 0;
+	border-radius: 0px;
+	border: 0px;
+	text-align: left;
+}
+
+input[type=text], input[type=password] {
+	position: relative;
+	top: -0.1em;
+	border-style: solid;
+	border-radius: 0.3em;
+	border-color: rgba(20, 157, 130,1.0);
+	-webkit-appearance: none;
+	margin: 0px;
+	padding: 0.3em;
+}
+
+select {
+	-webkit-appearance: none;
+	border-style: solid;
+	border-radius: 0.3em;
+	border-color: rgba(20, 157, 130,1.0);
+	background-color: rgba(20, 157, 130,1.0);
+	color: white;
+	width: 17em;
+	padding: 0.35em;
+	outline: none;
+	position: absolute;
+	top: -0.25em;
+	left: 9.75em;
+	font-family: "American Typewriter", Georgia;
+}
+
+.select {
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 1.4em;
+	height: 0;
+	width: 100%;
+}
+
+.select:after {
+	font-size: 0.6em;
+	content: "▼";
+    position: absolute;
+    top: 0.1em;
+    left: 28em;
+    height: 1em;
+    padding: 0.4em 0.7em;
+    background-color: rgba(20, 157, 130,1.0);
+    color: white;
+    
+    pointer-events:none;
+}
+
+#travel input[type=submit] {
+	width: 100%;
+	padding: 0px;
+	font-size: 1em;
+	text-align: left;
+}
+
+.leftbutton, .rightbutton {
+	padding: 0.4em;
+	margin: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	color: /*rgba(255, 30, 10, 0.9);*/rgba(20, 157, 130,1.0);
+	border-radius: 0px;
+	border: 0px;
+	font-size: 1.1em;
+}
+
+.leftbutton {
+	float: left;
+	text-align: left;
+}
+
+.rightbutton {
+	float: right;
+	text-align: right;
+}
+
+.fullwidth {
+	width: 100%;
+}
+
+form tr td {
+	font-size: 1em;
+}
+
+/* Styling of table cells and tables */
+
+td.topcell {
+	font-weight: 600;
+}
+td.leftcell {
+	text-align: left;
+	width:58%;
+	padding-left: 12px;
+}
+td.rightcell {
+	text-align: right;
+	width:42%;
+	padding-right: 12px;
+}
+
+td.left3cell {
+	text-align: left;
+	width: 33%;
+}
+td.mid3cell {
+	text-align: center;
+	width: 34%;
+}
+td.right3cell {
+	text-align: right;
+	width: 33%;
+}
+
+#loggedin {
+	width: 100%;
+	background-color: black;
+	color: white;
+}
+#travel {
+	width: 100%;
+}
+
+/* Footer styling */
+
+footer {
+	background-color: rgba(0, 0, 0, 0.1);
+	margin: 0px;
+	padding: 10px 5px;
+}
+
+footer p {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+footer table {
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 4px;
+}
+
+footer td {
+	text-align: center;
+}
+
+footer td.leftcell {
+	padding-left: 7px;
+}
+footer td.rightcell {
+	padding-right: 7px;
+}
+footer td.left3cell {
+	padding-left: 7px;
+}
+footer td.right3cell {
+	padding-right: 7px;
+}
+
+
+/* DynamicMode and timer styling */
+#timer {
+	text-align: center;
+	font-size: 3em;
+	padding: 0;
+	margin: 0;
+}
+/* Styling for the gmLabel */
+#gmLabel {
+	text-align: center;
+	color: rgba(231, 76, 60, 1.0);
+	overflow: hidden;
+	height: auto;
+	display: block;
+	font-size: 1.3em;
+	padding-bottom: 0.4em;
+	margin: 0;
+}
+
+/* Styling for iframes (they should be invisible, no height, no width, no border) */
+
+iframe {
+	display: none;
+}
+
+
+/* Styling for bigger screens (not used very much) Maybe remove????*/
+
+@media (min-width: 500px) {
+	.whiteBackground {
+		position: relative;
+		width: 500px;
+		top: 12px;
+		margin-left: auto;
+		margin-right: auto;
+		/*margin-left: auto;
+		margin-right: auto;*/
+	}
+	body {
+		overflow:scroll;
+	}
+}
