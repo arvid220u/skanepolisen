@@ -3,9 +3,14 @@ Mr Gött Mos vs Fubbickarna — only one can survive.
 
 A real-life intense action game. Skånepolisen, created in 2014 by Melker, Arvid and Simon, was legendary from day 1.
 
+## TODOs
+
+- Always reload after a POST request so that bad things with reloading forms won't happen.
+- Deploy.
+
 ## Proposed Rule Changes
 
-All Fubbicks except the one who caught Mr. GM will be allowed to use their bikes. It will still not be trivial for the Fubbicks to catch Mr. GM, since the ones with the bikes will not know where they are. This becomes a much more fun game, in that the Fubbick who ended up at the same position as Mr. GM no longer only chases him, but more acts as a tracker of them, for the other people to get to know their location.
+Implemented: All Fubbicks except the one who caught Mr. GM will be allowed to use their bikes. It will still not be trivial for the Fubbicks to catch Mr. GM, since the ones with the bikes will not know where they are. This becomes a much more fun game, in that the Fubbick who ended up at the same position as Mr. GM no longer only chases him, but more acts as a tracker of them, for the other people to get to know their location.
 
 ## Original Game Proposal Document
 
