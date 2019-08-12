@@ -1,6 +1,8 @@
 <?php include 'functions.php';
 checkLogin();
 
+require($sendgrid_path);
+
 $userErr = $passwordErr = $trickErr = "";
 $email = $username = $password = "";
 
@@ -82,9 +84,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$query = "INSERT INTO RegisteredUsers (Username, Password, Email, Hash) 
 		VALUES('$username', '$password', '$email', '$hash')";
 		mysqli_query_trace($con, $query);
-		
-		// Skicka bekräftelsemail
-		$working = mail($email, "Bekräfta ditt konto hos Skånepolisen", "Välkommen till Skånepolisen. Klicka på länken nedan för att bekräfta ditt konto.
+
+		$email_to = $email;
+
+		$email = new \SendGrid\Mail\Mail(); 
+		$email->setFrom($skanepolisen_email, "Skånepolisen");
+		$email->setSubject("Bekräfta ditt konto hos Skånepolisen");
+		$email->addTo($email_to, "$username");
+		$email->addContent("text/plain", "Välkommen till Skånepolisen. Klicka på länken nedan för att bekräfta ditt konto.
 
 -------------------------
 Användarnamn: $username
@@ -97,10 +104,34 @@ $skanepolisen_url/verify.php?username=$username&hash=$hash
 Därefter kan du logga in som vanligt, och börja spela Skånepolisen!!!
 
 
-Var det inte du som skapade kontot? Då kan du bara ignorera meddelandet.", "From: Skånepolisen <info@skanepolisen.org>");
-		if ($working) {
+Var det inte du som skapade kontot? Då kan du bara ignorera meddelandet.");
+		$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+		try {
+			$response = $sendgrid->send($email);
+
 			redirect("verificationEmailSent.php");
+		} catch (Exception $e) {
+			echo 'Caught exception: '. $e->getMessage() ."\n";
 		}
+		
+		// Skicka bekräftelsemail
+// 		$working = mail($email, "Bekräfta ditt konto hos Skånepolisen", "Välkommen till Skånepolisen. Klicka på länken nedan för att bekräfta ditt konto.
+
+// -------------------------
+// Användarnamn: $username
+// Lösenord: Hemligt
+// -------------------------
+
+// Länk för att bekräfta ditt konto:
+// $skanepolisen_url/verify.php?username=$username&hash=$hash
+
+// Därefter kan du logga in som vanligt, och börja spela Skånepolisen!!!
+
+
+// Var det inte du som skapade kontot? Då kan du bara ignorera meddelandet.", "From: Skånepolisen <info@skanepolisen.org>");
+// 		if ($working) {
+// 			redirect("verificationEmailSent.php");
+// 		}
 	}
 } 
 ?>
@@ -149,13 +180,18 @@ Var det inte du som skapade kontot? Då kan du bara ignorera meddelandet.", "Fro
 				<h1>Skapa konto</h1>
 			</header>
 			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-				<div class="select">E-postadress: <select name="emails">
 					<?php
-					foreach ($emails as $key=>$mail) {
-						echo "<option value='$mail'>$mail</option>";
+
+					if ($allow_any_email_signup) {
+						echo 'E-postadress: <input type="text" name="emails"><br>';
+					} else {
+						echo '<div class="select">E-postadress: <select name="emails">';
+						foreach ($emails as $key=>$mail) {
+							echo "<option value='$mail'>$mail</option>";
+						}
+						echo '</select></div>';
 					}
 					?>
-				</select></div>
 				<br>
 				Användarnamn: <input type="text" name="username" value="<?php echo $username;?>"><?php if ($userErr != "") { echo "<br>"; }?><span class="error"><?php echo $userErr;?></span><br><br>
 				Lösenord: <input type="password" name="password"><?php if ($passwordErr != "") { echo "<br>"; }?><span class="error"><?php echo $passwordErr;?></span><?php if ($trickErr != "") { echo "br>"; } ?>

@@ -16,6 +16,7 @@ services:
           - DB_USER=user
           - DB_PASS=test
           - SKANEPOLISEN_URL=http://localhost:8001
+          - SENDGRID_API_KEY=${SENDGRID_API_KEY}
     db:
         image: mysql:8.0
         ports: 
