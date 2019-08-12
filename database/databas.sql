@@ -46,9 +46,6 @@ CREATE TABLE IF NOT EXISTS `ActiveUsers` (
   PRIMARY KEY (`Username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
-INSERT INTO `ActiveUsers` (`Username`, `Gang`, `Cykel`, `Cykelrad`, `Position`, `Gottmos`, `InTransit`, `PreparedForStart`, `IsThere`, `HasTurn`, `IsOut`, `PreparedForDynamicMode`, `IsBusted`, `DynamicIsBack`, `Modified`, `DynamicEndPassed`, `EndFinished`, `GottmosShowedPropose`) VALUES
-('Mecke99', 10, 8, 4, NULL, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, NULL);
-
 CREATE TABLE IF NOT EXISTS `CykelRelations` (
   `Stop1` tinyint(4) NOT NULL,
   `Stop2` tinyint(4) NOT NULL
