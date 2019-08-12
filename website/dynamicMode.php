@@ -176,12 +176,12 @@ if (isset($_POST['username'])) {
 					
 					if ($isGottmos > 0) {
 						// This user will be sent out of play
-						mysqli_query_trace($con, "UPDATE ActiveUsers SET IsOut='1' WHERE Username='".$username."'");
+						mysqli_query_trace($con, "UPDATE ActiveUsers SET IsOut='3' WHERE Username='".$username."'");
 						redirect("isOut.php");
 						die();
 					} elseif ($isGottmos == 0) {
 						// The otherUser will be sent out of play
-						mysqli_query_trace($con, "UPDATE ActiveUsers SET IsOut='1' WHERE Username='".$otherUser."'");
+						mysqli_query_trace($con, "UPDATE ActiveUsers SET IsOut='3' WHERE Username='".$otherUser."'");
 					}
 					
 				} elseif ($thisBusted % 3 == 2) {
