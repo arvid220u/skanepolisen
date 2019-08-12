@@ -459,12 +459,17 @@ $frequencyOverride = NULL;
 									}
 									
 									if (!$gottmosIsAlone) {
-										$cardInfo = "<br>De har ".$gang." ".$gangname.", ".$cykel." ".$cykelname." och ".$cykelrad." ".$cykelradname." tillsammans.<br>";
+										$cardInfo = "<br>Mr. Gött Mos har ".$gang." ".$gangname.", ".$cykel." ".$cykelname." och ".$cykelrad." ".$cykelradname." tillsammans.<br>";
 									} else {
-										$cardInfo = "<br>Hen har ".$gang." ".$gangname.", ".$cykel." ".$cykelname." och ".$cykelrad." ".$cykelradname.".<br>";
+										$cardInfo = "<br>Mr. Gött Mos har ".$gang." ".$gangname.", ".$cykel." ".$cykelname." och ".$cykelrad." ".$cykelradname.".<br>";
 									}
 									
-									$gottmosPosWarning .= ucfirst($gottmosShowed)." är på position nr <b>".$pos."</b>.<br>";
+
+									if (returnFieldForUser("ActiveUsers",10, $gottmosShowed)) {
+										$gottmosPosWarning .= ucfirst($gottmosShowed)." visade sig på position nr <b>".$pos."</b> (men är nu ute ur spelet).<br>";
+									} else {
+										$gottmosPosWarning .= ucfirst($gottmosShowed)." är på position nr <b>".$pos."</b>.<br>";
+									}
 									
 								} else {
 									if (!$gottmosIsAlone) {
