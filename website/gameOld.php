@@ -382,7 +382,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 										$gottmosPosWarning .= ucfirst($name)." är på position nr <b>".$pos."</b>.<br>";
 									} else if (returnFieldForUser("ActiveUsers", 9, $name) > 0) {
 										// The Gottmosare has not moved
-										$gottmosPosWarning .= ucfirst($name)." kommer att visa sin position så fort han har flyttat.<br>";
+										$gottmosPosWarning .= ucfirst($name)." kommer att visa sin position så fort hen har flyttat.<br>";
 									}
 								}
 							}

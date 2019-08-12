@@ -469,10 +469,10 @@ $frequencyOverride = NULL;
 								} else {
 									if (!$gottmosIsAlone) {
 										// This user hasn't moved, show informative text
-										$gottmosPosWarning .= "Mr. Gött Mos har valt att ".$gottmosShowed." ska visa sig den här omgången. Han har dock inte flyttat än.";
+										$gottmosPosWarning .= "Mr. Gött Mos har valt att ".$gottmosShowed." ska visa sig den här omgången. Hen har dock inte flyttat än.";
 									} else {
 										// Gottmos is automatically selected
-										$gottmosPosWarning .= ucfirst($gottmosShowed)." ska visa sig den här omgången. Han har dock inte flyttat än.";
+										$gottmosPosWarning .= ucfirst($gottmosShowed)." ska visa sig den här omgången. Hen har dock inte flyttat än.";
 									}
 								}
 							
@@ -482,7 +482,7 @@ $frequencyOverride = NULL;
 									$gottmosPosWarning .= "Mr. Gött Mos har ännu inte valt vem av dem som ska visa sig den här omgången.";
 								} else {
 									// Gottmos is automatically selected
-									$gottmosPosWarning .= ucfirst($gottmosShowed)." ska visa sig den här omgången. Han har dock inte flyttat än.";
+									$gottmosPosWarning .= ucfirst($gottmosShowed)." ska visa sig den här omgången. Hen har dock inte flyttat än.";
 								}
 							}
 						

@@ -339,7 +339,7 @@ $dynamicEndPassed = returnFieldForUser("ActiveUsers", 15, $username);
 					så måste både du och <b>".$otherName."</b> trycka på knappen nedan. Innan dess måste ni dock ha
 					skakat hand med varandra (eller något), och ni får inte gå iväg innan jakten startat.";
 				} else if ($isGottmos > 0) {
-					echo "Klant! <b>".ucfirst($otherName)."</b> är nu på samma position som du. Han och de andra 
+					echo "Klant! <b>".ucfirst($otherName)."</b> är nu på samma position som du. Hen och de andra 
 					fubbickarna kommer nu att jaga dig i 5 minuter. Klarar du dig utan att någon fubbick nuddar dig,
 					så är du kvar i spelet. Annars är du ute.<br>Jakten startar först när både du och <b>".$otherName."</b>
 					har tryckt på knappen nedan. Innan dess måste ni dock ha skakat hand med varandra (eller något), och ni får inte gå iväg innan jakten startat.";
@@ -358,7 +358,7 @@ $dynamicEndPassed = returnFieldForUser("ActiveUsers", 15, $username);
 			<!-- Show a label declaring that the other user hasn't yet pushed the button -->
 			<?php } elseif ($waitToDynamicMode > 0 && $dynamicMode == 0) {
 				
-				echo "<b>".ucfirst($otherName)."</b> har ännu inte tryckt på knappen. Först när han gör det så startar nedräkningen, och i och med det jakten.<br><br>";
+				echo "<b>".ucfirst($otherName)."</b> har ännu inte tryckt på knappen. Först när hen gör det så startar nedräkningen, och i och med det jakten.<br><br>";
 				
 				$frequency = 2;
 				
@@ -635,8 +635,8 @@ $dynamicEndPassed = returnFieldForUser("ActiveUsers", 15, $username);
 						<?php if (!isset($_SESSION['setBusted'])) { ?>
 							<!--important!: the one reporting, typically a fubbick, will not be shown of this-->
 							
-							<p><?php echo ucfirst($otherUser); ?> har rapporterat att han tagit (nuddat vid) dig under jakten. Det skulle
-								betyda att du åker ut ur spelet. Stämmer det att han tagit dig? (P.S. Det är inte kul att fuska.)</p>
+							<p><?php echo ucfirst($otherUser); ?> har rapporterat att hen tagit (nuddat vid) dig under jakten. Det skulle
+								betyda att du åker ut ur spelet. Stämmer det att hen tagit dig? (P.S. Det är inte kul att fuska.)</p>
 							
 							<form action="<?php echo htmlspecialchars($_SERVER["REQUEST_URI"]);?>" method="post" class="fullwidth">
 								<input type="text" name="username" value="<?php echo $username; ?>" hidden>
@@ -649,7 +649,7 @@ $dynamicEndPassed = returnFieldForUser("ActiveUsers", 15, $username);
 							
 						<?php } else { ?>
 							<!-- the one reporting will be shown some information about the process -->
-							<p><?php echo ucfirst($otherUser); ?> måste först godkänna att han tagit dig. Först då åker du ut.</p>
+							<p><?php echo ucfirst($otherUser); ?> måste först godkänna att hen tagit dig. Först då åker du ut.</p>
 							
 						<?php } ?>
 						
@@ -660,7 +660,7 @@ $dynamicEndPassed = returnFieldForUser("ActiveUsers", 15, $username);
 							<!--important!: the one reporting, typically a fubbick, will not be shown of this-->
 						
 							<p><?php echo ucfirst($otherUser); ?> har rapporterat att du har tagit (nuddat vid) honom under jakten. Det skulle
-								betyda att han åker ut ur spelet. Stämmer det att du tagit honom?</p>
+								betyda att hen åker ut ur spelet. Stämmer det att du tagit honom?</p>
 							
 							<form action="<?php echo htmlspecialchars($_SERVER["REQUEST_URI"]);?>" method="post" class="fullwidth">
 								<input type="text" name="username" value="<?php echo $username; ?>" hidden>
@@ -673,7 +673,7 @@ $dynamicEndPassed = returnFieldForUser("ActiveUsers", 15, $username);
 								
 						<?php } else { ?>
 							<!-- the one reporting will be shown some information about the process -->
-							<p><?php echo ucfirst($otherUser); ?> måste först godkänna att du tagit honom. Först då åker han ut.</p>
+							<p><?php echo ucfirst($otherUser); ?> måste först godkänna att du tagit honom. Först då åker hen ut.</p>
 							
 						<?php } ?>
 						
@@ -787,7 +787,7 @@ $dynamicEndPassed = returnFieldForUser("ActiveUsers", 15, $username);
 							// Is a fubbick
 							$otherUser = $isBustedUsers[1]; ?>
 						
-							<p>Du och <?php echo $otherUser; ?> kan fortfarande inte komma överens i frågan om han blev tagen eller inte.
+							<p>Du och <?php echo $otherUser; ?> kan fortfarande inte komma överens i frågan om hen blev tagen eller inte.
 								Ni borde skämmas!!! Alla spelare ska nu träffas mitt på Stortorget för att diskutera frågan,
 								och avgöra den. Svara vad ni kommit överens om nedan.<br>
 								Hur kul är det att bråka, i stället för att spela Skånepolisen???</p>
