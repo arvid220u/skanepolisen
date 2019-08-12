@@ -300,12 +300,25 @@ if ($_SESSION['endDone'] != "set") {
 				  <p style="margin: 0px; padding: 0px; text-align: center;">&copy; Copyright  by Arvid Lunnemark</p></div>
 				  </div></body></html>';
 		
-		$headers = "From: Skånepolisen <info@skanepolisen.org>" . "\r\n";
-		$headers .= 'MIME-Version: 1.0' . "\r\n";
-		$headers .= 'Content-type: text/html; charset="UTF-8"' . "\r\n";
+		// $headers = "From: Skånepolisen <info@skanepolisen.org>" . "\r\n";
+		// $headers .= 'MIME-Version: 1.0' . "\r\n";
+		// $headers .= 'Content-type: text/html; charset="UTF-8"' . "\r\n";
 		
-		mail($email, $heading, $body, $headers);
+		// mail($email, $heading, $body, $headers);
 		
+		$email_to = $email;
+
+		$email = new \SendGrid\Mail\Mail(); 
+		$email->setFrom($skanepolisen_email, "Skånepolisen");
+		$email->setSubject($heading);
+		$email->addTo($email_to, "$username");
+		$email->addContent("text/html", $body);
+		$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+		try {
+			$response = $sendgrid->send($email);
+		} catch (Exception $e) {
+			echo 'Caught exception: '. $e->getMessage() ."\n";
+		}
 		
 		
 		
