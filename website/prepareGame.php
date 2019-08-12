@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 	$fromWait = $_GET['fromWait'];
 	if ($fromWait > 0) {
 		$script = "setTimeout(function () {
-        				window.location = 'http://skanepolisen.org/prepareGame.php';
+        				window.location = '".$skanepolisen_url."/prepareGame.php';
     				}, ".$fromWait.");";
 	}
 }

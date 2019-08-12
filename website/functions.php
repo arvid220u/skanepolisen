@@ -283,12 +283,12 @@ function checkDynamicIsBack($when, $username) {
 
 function redirect($url) {
 	mysqli_close($GLOBALS['con']);
-	if (strpos($url,'http://skanepolisen.org') === false && strpos($url,'/') === false) {
+	if (strpos($url,$skanepolisen_url) === false && strpos($url,'/') === false) {
 		$lastUrl = $url;
-		$url = "http://skanepolisen.org/".$lastUrl;
-	} elseif (strpos($url,'http://skanepolisen.org') === false && strpos($url,'/') !== false) {
+		$url = $skanepolisen_url.$lastUrl;
+	} elseif (strpos($url,$skanepolisen_url) === false && strpos($url,'/') !== false) {
 		$lastUrl = $url;
-		$url = "http://skanepolisen.org".$lastUrl;
+		$url = $skanepolisen_url.$lastUrl;
 	}
 	header("Location: $url");
 }

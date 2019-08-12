@@ -493,9 +493,9 @@ $dynamicEndPassed = returnFieldForUser("ActiveUsers", 15, $username);
         				}
         				if (heartbeat - lastInterval > 1100) {
         					if (dynamicMode == "1" && waitToDynamicMode == "0") {
-								window.location = 'http://skanepolisen.org/dynamicMode.php';
+								window.location = <?php echo $skanepolisen_url; ?> + '/dynamicMode.php';
 							} else {
-								window.location = 'http://skanepolisen.org/dynamicMode.php?samepos=true';
+								window.location = <?php echo $skanepolisen_url; ?> + '/dynamicMode.php?samepos=true';
 							}
         				}
         				lastInterval = heartbeat;

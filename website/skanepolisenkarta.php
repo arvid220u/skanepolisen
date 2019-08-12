@@ -98,12 +98,12 @@
 				<tr>
 					<?php
 						$goBack = $_SERVER['HTTP_REFERER'];
-						if ($goBack == "http://skanepolisen.org/skanepolisenkarta.php" || $goBack == "http://skanepolisen.org/rules.php") {
-							$goBack = "http://skanepolisen.org/index.php";
-						} elseif (strpos($goBack, 'http://skanepolisen.org') === false) {
-							$goBack = "http://skanepolisen.org/index.php";
+						if ($goBack == $skanepolisen_url."/skanepolisenkarta.php" || $goBack == $skanepolisen_url."/rules.php") {
+							$goBack = $skanepolisen_url."/index.php";
+						} elseif (strpos($goBack, $skanepolisen_url) === false) {
+							$goBack = $skanepolisen_url."/index.php";
 						} elseif (strpos($goBack, 'iframe.php') !== false) {
-							$goBack = "http://skanepolisen.org/index.php";
+							$goBack = $skanepolisen_url."/index.php";
 						}
 					?>
 					<td class="leftcell"><a href="<?php echo $goBack; ?>">< Gå tillbaka</a></td>

@@ -92,7 +92,7 @@ Lösenord: Hemligt
 -------------------------
 
 Länk för att bekräfta ditt konto:
-http://skanepolisen.org/verify.php?username=$username&hash=$hash
+$skanepolisen_url/verify.php?username=$username&hash=$hash
 
 Därefter kan du logga in som vanligt, och börja spela Skånepolisen!!!
 
