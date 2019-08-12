@@ -11,10 +11,12 @@ checkDynamicIsBack("before", $username);
 
 $frequency = 20;
 
+$isInSamePos = false;
+
 if (isset($_GET['samepos'])) {
 	if ($_GET['samepos'] == "true") {
 		checkSamePos("after", $username);
-		
+		$isInSamePos = true;
 	} else {
 		checkSamePos("before", $username);
 		checkDynamicMode("after");
@@ -1097,8 +1099,8 @@ $dynamicEndPassed = returnFieldForUser("ActiveUsers", 15, $username);
 			<?php } ?>
 					<b>Regler</b>:
 					<ul>
-						<li>Endast gång är tillåten. Man måste alltid ha minst en fot i marken.</li>
-						<li>Inga cyklar.</li>
+						<li>Endast gång eller cykling är tillåten. Man måste alltid ha minst en fot i marken för gång.</li>
+						<li>Inga cyklar för någon av de två Mr. GM, eller för fubbicken som utlöste jakten. Du får <?php if ($isInSamePos or $isGottmos) { echo '<b>inte</b> '; }?>använda cykel.</li>
 						<li>Man får inte gå mot rött ljus.</li>
 						<li>Man får bara gå över gator på övergångsställen.</li>
 						<li>Mr. Gött Mos måste alltid få 10 sekunders försprång.</li>

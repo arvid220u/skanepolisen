@@ -60,7 +60,8 @@
 				<li>Mr. Gött Mos får 6 gång-biljetter, 4 cykel-biljetter och 3 cykelräd-biljetter tillsammans vid starten. De får Fubbickarnas använda biljetter.</li>
 				<li>Fubbickarna börjar med 10 gång-biljetter, 8 cykel-biljetter och 4 cykelräd-biljetter var.</li>
 				<li>Efter varannan omgång så ska en Mr. Gött Mos alltid redovisa sin position och de gemensamma biljetterna. Båda Mr. Gött Mos bestämmer tillsammans vem som ska visa sig.</li>
-				<li>När en fubbick hamnat på samma position som Mr. Gött Mos startar en 5 minuter lång jakt. I den får man endast gå, det vill säga man måste alltid ha minst en fot i marken.</li>
+				<li>När en fubbick hamnat på samma position som Mr. Gött Mos startar en 5 minuter lång jakt. I den får fubbicken som hittade Mr. GM och båda Mr. GM endast gå, det vill säga de måste alltid ha minst en fot i marken. De övriga fubbickarna får använda sin cykel, men inte springa.</li>
+				<li>Platsdelning via GPS får inte förekomma.</li>
 				<li><b>Man får inte fuska.</b></li>
 			</ul>
 			</div>
