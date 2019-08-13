@@ -9,6 +9,10 @@ A real-life intense action game. Skånepolisen, created in 2014 by Melker, Arvid
 - Deploy.
 - Giving up gives error.
 
+## Deployment
+
+On DigitalOcean, using CoreOS droplet. Installing docker-compose by following instructions from https://www.vultr.com/docs/installing-docker-compose-on-coreos. Ideally, the database should be more persistent than this, but it's fine.
+
 ## Proposed Rule Changes
 
 Implemented: All Fubbicks except the one who caught Mr. GM will be allowed to use their bikes. It will still not be trivial for the Fubbicks to catch Mr. GM, since the ones with the bikes will not know where they are. This becomes a much more fun game, in that the Fubbick who ended up at the same position as Mr. GM no longer only chases him, but more acts as a tracker of them, for the other people to get to know their location.
