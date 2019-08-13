@@ -11,7 +11,7 @@ A real-life intense action game. Skånepolisen, created in 2014 by Melker, Arvid
 
 ## Deployment
 
-On DigitalOcean, using CoreOS droplet. Installing docker-compose by following instructions from https://www.vultr.com/docs/installing-docker-compose-on-coreos. Ideally, the database should be more persistent than this, but it's fine.
+On DigitalOcean, using Docker droplet. Clone this repo, configure the `.env` file, check the other environment variables and then start compose in detached mode: `docker-compose -f docker-compose.prod.yml -d up`. Ideally, the database should be more persistent than this, but it's fine.
 
 ## Proposed Rule Changes
 
