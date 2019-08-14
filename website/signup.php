@@ -93,10 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$email->addTo($email_to, "$username");
 		$email->addContent("text/plain", "Välkommen till Skånepolisen. Klicka på länken nedan för att bekräfta ditt konto.
 
--------------------------
 Användarnamn: $username
 Lösenord: Hemligt
--------------------------
 
 Länk för att bekräfta ditt konto:
 $skanepolisen_url/verify.php?username=$username&hash=$hash
